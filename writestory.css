@@ -1,0 +1,249 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+/* Header Section */
+header {
+    background-color: #6C8CBF;
+    padding: 20px 0;
+    color: black;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    align-items: center;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+}
+
+/* Style for active links */
+nav ul li a.active {
+    font-weight: bolder;        /* Makes the font bold */
+    color: black;             /* Optional: Change the color if you want */
+    position: relative;
+    padding-bottom: 5px;      /* Adds space between text and underline */
+}
+
+/* Create a custom underline effect with spacing */
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: black;  /* Underline color */
+    transform: translateY(4px); /* Adjust the distance of the underline from the text */
+}
+
+/* Optional: Style for hover effect */
+nav ul li a:hover {
+    font-weight: bold; 
+    cursor: pointer;
+    color: black;
+}
+
+.logo{
+    font-size: 20px;
+    
+}
+.search-bar {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    padding-right: 40px;
+}
+
+
+.write-story-section {
+    background-image: url('Images/a.jpg'); /* Add the URL of your background image here */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; 
+    background-attachment: scroll; 
+    height: 250px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+   
+
+.write-story-section h1 {
+    margin-bottom: 1.5rem;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* Form Section */
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px; /* Padding for top/bottom and left/right */
+    position: relative; 
+}
+
+/* Form Styling */
+.story-form {
+    background-color: #e5ecf4; /* Form background color */
+    padding: 40px; /* Padding inside the form */
+    border-radius: 15px; /* Rounded corners */
+    width: 100%;
+    max-width: 600px; /* Maximum width for the form */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    min-height: 700px; /* Minimum height for the form */
+    display: flex;
+    flex-direction: column; /* Arrange form elements in a column */
+    justify-content: space-between; /* Distribute space evenly between elements */
+}
+
+
+/* Input fields styling */
+.story-form input,
+.story-form textarea {
+    width: 100%; /* Full width for all input fields */
+    padding: 16px; /* Padding inside the input and textarea */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 5px; /* Slightly rounded corners */
+    font-size: 18px; 
+    margin-bottom: 20px; /* Space below each field */
+    outline: none; /* No outline on focus */
+    background-color: white; /* Input background color */
+    box-sizing: border-box; /* Ensure padding fits within the width */
+}
+
+/* Textarea specific styling */
+.story-form textarea {
+    resize: none; /* Disable resizing of textarea */
+    height: 250px; /* Height for textarea */
+}
+
+/* Focus styling */
+.story-form input:focus,
+.story-form textarea:focus {
+    border-color: #6C8CBF; /* Border color on focus */
+}
+
+/* Style for the thank-you message */
+.thank-you-message-container {
+    position: absolute; /* Positioned above the form */
+    top: -40px; /* Above the form */
+    width: 80%;
+    display: flex;
+    justify-content: center; /* Center the message horizontally */
+    z-index: 10; 
+}
+
+.thank-you-message {
+    background-color: #6C8CBF;
+    color: white;
+    padding: 16px 40px; /* Adjust padding to fit message */
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    width: auto; /* Ensure it only takes up the space required for the text */
+    font-size: 18px; 
+    line-height: 1.5; /* Adjust line height for better readability */
+    max-width: 500px; 
+}
+
+
+/* Button styling */
+.story-form button {
+    width: 100%; /* Full width button */
+    padding: 16px; /* Padding for the button */
+    background-color: #6C8CBF; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border for button */
+    border-radius: 5px; /* Slightly rounded corners */
+    font-size: 20px; /* Button font size */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Button hover styling */
+.story-form button:hover {
+    background-color: #5a78a2; /* Darker background on hover */
+}
+
+
+footer {
+    background-color: #6C8CBF;
+    padding: 20px 10px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    font-size: 18px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.footer-left, 
+.footer-center,
+.footer-right {
+    flex: 1;
+}
+
+/* Separate logo styling */
+.footer-logo {
+    /* Adjust the logo positioning and styling here */
+    padding: 0;
+    margin-left: 10px; /* You can change this value to move the logo */
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    align-self: center;
+}
+
+.footer-right .social-icons a {
+    margin-left: 20px;
+    color: black;
+    text-decoration: none;
+} 
+
+
+.social-icons img {
+    padding-left: 5px;
+    padding-right: 7px;
+}
+
+
+/* Separate copyright section styling */
+.footer-copyright {
+    font-size: 16px; 
+    margin-top: 30px;
+    text-align: center;
+    border-top: 1px solid #6b85ae; /* Thin line separator */
+    padding-top: 10px;
+}
